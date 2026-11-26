@@ -1,0 +1,28 @@
+data: {"type": "start", "messageId": "m-c484104feb9a"}
+
+data: {"type": "text-start", "id": "t-1"}
+
+data: {"type": "text-delta", "id": "t-1", "delta": "{\""}
+
+data: {"type": "text-delta", "id": "t-1", "delta": "confidence"}
+
+data: {"type": "text-delta", "id": "t-1", "delta": "\": "}
+
+data: {"type": "text-delta", "id": "t-1", "delta": "0.1"}
+
+data: {"type": "text-delta", "id": "t-1", "delta": ", \"intent\": \"unknown"}
+
+data: {"type": "text-delta", "id": "t-1", "delta": "\", \"order_id\": null"}
+
+data: {"type": "text-delta", "id": "t-1", "delta": ", \"reason\": null}"}
+
+data: {"type": "data-node", "data": {"name": "classify", "status": "done"}}
+
+data: {"type": "error", "errorText": "对话服务异常：KeyError"}
+
+data: {"type": "text-end", "id": "t-1"}
+
+data: {"type": "finish"}
+
+data: [DONE]
+

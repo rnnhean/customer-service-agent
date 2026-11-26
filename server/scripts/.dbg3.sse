@@ -1,0 +1,12 @@
+data: {"type": "start", "messageId": "m-f096b3fa2040"}
+
+data: {"type": "data-node", "data": {"name": "classify", "status": "done"}}
+
+data: {"type": "data-node", "data": {"name": "refund_approval", "status": "done"}}
+
+data: {"type": "data-answer", "data": {"text": "订单 ORD20260002 当前状态是「REFUNDED」，无法发起退款。如果是其他问题，我可以帮您转人工。", "degraded": false, "citations": [], "intent": "change_request"}}
+
+data: {"type": "finish"}
+
+data: [DONE]
+

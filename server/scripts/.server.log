@@ -1,0 +1,78 @@
+INFO:     Started server process [25252]
+INFO:     Waiting for application startup.
+2026-11-06 19:21:01,531 INFO app.db.connection: PG 连接池就绪 (min=2, max=20)
+2026-11-06 19:21:01,566 INFO app: 数据库就绪: 127.0.0.1:5433/customer_service
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-11-06 19:21:03,066 INFO app: GET /health -> 200 (26ms)
+INFO:     127.0.0.1:62526 - "GET /health HTTP/1.1" 200 OK
+2026-11-06 19:21:03,099 INFO app: POST /api/chat/stream -> 200 (5ms)
+INFO:     127.0.0.1:62528 - "POST /api/chat/stream HTTP/1.1" 200 OK
+2026-11-06 19:21:04,092 WARNING langfuse: Authentication error: Langfuse client initialized without public_key. Client will be disabled. Provide a public_key parameter or set LANGFUSE_PUBLIC_KEY environment variable. 
+2026-11-06 19:21:13,767 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+D:\20260916\customer-service-agent\server\.venv\Lib\site-packages\pydantic\main.py:520: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=Route(intent='benefit_qa'...er_id=None, reason=None), input_type=Route])
+  return self.__pydantic_serializer__.to_python(
+2026-11-06 19:21:15,211 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-06 19:21:23,437 INFO app: POST /api/chat/stream -> 200 (1ms)
+INFO:     127.0.0.1:62734 - "POST /api/chat/stream HTTP/1.1" 200 OK
+2026-11-06 19:21:23,713 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+D:\20260916\customer-service-agent\server\.venv\Lib\site-packages\pydantic\main.py:520: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=Route(intent='order_statu...D20260002', reason=None), input_type=Route])
+  return self.__pydantic_serializer__.to_python(
+2026-11-06 19:21:25,082 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-06 19:21:27,100 INFO app: POST /api/chat/stream -> 200 (1ms)
+INFO:     127.0.0.1:62528 - "POST /api/chat/stream HTTP/1.1" 200 OK
+2026-11-06 19:21:27,423 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+D:\20260916\customer-service-agent\server\.venv\Lib\site-packages\pydantic\main.py:520: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=Route(intent='complaint',...权益根本用不了'), input_type=Route])
+  return self.__pydantic_serializer__.to_python(
+2026-11-06 19:21:28,638 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-06 19:21:35,401 INFO app: POST /api/chat/stream -> 200 (1ms)
+INFO:     127.0.0.1:51659 - "POST /api/chat/stream HTTP/1.1" 200 OK
+2026-11-06 19:21:35,676 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+D:\20260916\customer-service-agent\server\.venv\Lib\site-packages\pydantic\main.py:520: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=Route(intent='unknown', c...er_id=None, reason=None), input_type=Route])
+  return self.__pydantic_serializer__.to_python(
+2026-11-06 19:21:36,581 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-06 19:21:37,228 INFO app: GET /api/members/M0001 -> 200 (85ms)
+INFO:     127.0.0.1:62528 - "GET /api/members/M0001 HTTP/1.1" 200 OK
+2026-11-06 19:21:37,234 INFO app: POST /api/chat/stream -> 200 (1ms)
+INFO:     127.0.0.1:51659 - "POST /api/chat/stream HTTP/1.1" 200 OK
+2026-11-06 19:21:37,536 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+D:\20260916\customer-service-agent\server\.venv\Lib\site-packages\pydantic\main.py:520: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=Route(intent='change_requ...D20260304', reason=None), input_type=Route])
+  return self.__pydantic_serializer__.to_python(
+2026-11-06 19:21:38,643 INFO app: GET /api/approvals -> 200 (39ms)
+INFO:     127.0.0.1:62528 - "GET /api/approvals?status=pending HTTP/1.1" 200 OK
+2026-11-06 19:21:39,120 INFO app: POST /api/approvals/AP20261106112138FA600C/decision -> 200 (472ms)
+INFO:     127.0.0.1:51659 - "POST /api/approvals/AP20261106112138FA600C/decision HTTP/1.1" 200 OK
+2026-11-06 19:21:39,338 INFO app: GET /api/members/M0001 -> 200 (213ms)
+INFO:     127.0.0.1:62528 - "GET /api/members/M0001 HTTP/1.1" 200 OK
+2026-11-06 19:21:39,391 INFO app: POST /api/approvals/AP20261106112138FA600C/decision -> 409 (49ms)
+INFO:     127.0.0.1:51659 - "POST /api/approvals/AP20261106112138FA600C/decision HTTP/1.1" 409 Conflict
+2026-11-06 19:21:39,421 INFO app: GET /api/approvals -> 200 (21ms)
+INFO:     127.0.0.1:62528 - "GET /api/approvals?status=pending HTTP/1.1" 200 OK
+2026-11-06 19:21:39,428 INFO app: POST /api/approvals/AP20261106112138ABC6AC/decision -> 422 (2ms)
+INFO:     127.0.0.1:51659 - "POST /api/approvals/AP20261106112138ABC6AC/decision HTTP/1.1" 422 Unprocessable Entity
+2026-11-06 19:21:39,848 INFO app: GET /api/sessions -> 200 (415ms)
+INFO:     127.0.0.1:62528 - "GET /api/sessions HTTP/1.1" 200 OK
+2026-11-06 19:21:39,865 INFO app: GET /api/traces/e2e-1793964062797-benefit -> 200 (13ms)
+INFO:     127.0.0.1:51659 - "GET /api/traces/e2e-1793964062797-benefit HTTP/1.1" 200 OK
+2026-11-06 19:21:39,872 INFO app: POST /api/chat/stream -> 422 (1ms)
+INFO:     127.0.0.1:62528 - "POST /api/chat/stream HTTP/1.1" 422 Unprocessable Entity
+2026-11-06 19:24:30,831 INFO app: GET /health -> 200 (1ms)
+INFO:     127.0.0.1:62262 - "GET /health HTTP/1.1" 200 OK
+2026-11-06 19:24:48,194 INFO app: POST /api/chat/stream -> 400 (2ms)
+INFO:     127.0.0.1:53978 - "POST /api/chat/stream HTTP/1.1" 400 Bad Request
+2026-11-06 19:25:23,712 INFO app: POST /api/chat/stream -> 400 (1ms)
+INFO:     127.0.0.1:51710 - "POST /api/chat/stream HTTP/1.1" 400 Bad Request
+2026-11-06 19:25:42,477 INFO app: POST /api/chat/stream -> 400 (1ms)
+INFO:     127.0.0.1:56146 - "POST /api/chat/stream HTTP/1.1" 400 Bad Request
+2026-11-06 19:26:15,412 INFO app: POST /api/chat/stream -> 200 (3ms)
+INFO:     127.0.0.1:56604 - "POST /api/chat/stream HTTP/1.1" 200 OK
+2026-11-06 19:26:15,920 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+D:\20260916\customer-service-agent\server\.venv\Lib\site-packages\pydantic\main.py:520: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=Route(intent='order_statu...D20260002', reason=None), input_type=Route])
+  return self.__pydantic_serializer__.to_python(
+2026-11-06 19:26:17,301 INFO httpx2: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"

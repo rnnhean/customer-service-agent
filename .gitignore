@@ -1,0 +1,28 @@
+# 凭据
+.env
+*.env
+!.env.example
+
+# 数据
+*.db
+*.db-journal
+*.db-wal
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,49 @@
+[project]
+name = "customer-service-agent"
+version = "0.1.0"
+description = "多 Agent 客服系统：权益问答 / 订单查询 / 退款审批 / 投诉受理"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi==0.162.0",
+    "uvicorn[standard]==0.54.0",
+    "pydantic==2.14.3",
+    "pydantic-settings==2.16.2",
+    "python-dotenv==1.2.4",
+    "httpx==0.28.1",
+    "sse-starlette==3.6.0",
+
+    "langgraph==1.2.20",
+    "langchain==1.4.9",
+    "langchain-core==1.7.6",
+    "langchain-openai==1.7.4",
+    "langgraph-checkpoint-postgres==3.2.0",
+
+    "psycopg[binary,pool]==3.3.8",
+    "psycopg-pool==3.3.3",
+
+    "langfuse==5.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.2.0",
+    "pytest-asyncio==1.4.1.post1",
+    "ruff==0.17.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["B008"]   # FastAPI 的 Depends 默认参数
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = [
+    "eval: 真实调用 LLM 的评估用例，默认不跑（-m 'not eval'）",
+    "llm: 需要真实 LLM 凭据的用例",
+]
+addopts = "-m 'not eval and not llm'"
+testpaths = ["tests"]

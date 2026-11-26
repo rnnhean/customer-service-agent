@@ -1,0 +1,10 @@
+data: {"type": "start", "messageId": "m-80d616ea2730"}
+
+data: {"type": "data-node", "data": {"name": "classify", "status": "done"}}
+
+data: {"type": "data-node", "data": {"name": "benefit_rag", "status": "done"}}
+
+data: {"type": "finish"}
+
+data: [DONE]
+

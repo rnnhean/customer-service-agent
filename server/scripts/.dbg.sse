@@ -1,0 +1,10 @@
+data: {"type": "start", "messageId": "m-41f8751de930"}
+
+data: {"type": "data-node", "data": {"name": "classify", "status": "done"}}
+
+data: {"type": "error", "errorText": "对话服务异常：KeyError"}
+
+data: {"type": "finish"}
+
+data: [DONE]
+

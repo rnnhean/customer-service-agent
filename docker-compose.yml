@@ -1,0 +1,25 @@
+services:
+  csa-postgres:
+    # 用 pgvector 版 PG16：既满足业务库，又给权益知识库的向量检索留好扩展
+    image: pgvector/pgvector:pg16
+    container_name: csa_postgres
+    # 5432 已被 knowledge_hub_postgres 占用，这里走 5433，互不干扰
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_USER: csa
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-csa_local_dev}
+      POSTGRES_DB: customer_service
+      TZ: Asia/Shanghai
+    volumes:
+      - csa_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U csa -d customer_service"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  csa_pgdata:
+    name: csa_pgdata
